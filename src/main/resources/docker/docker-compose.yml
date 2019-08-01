@@ -1,0 +1,23 @@
+version: '3'
+services:
+  clickhouse:
+    build: ./clickhouse
+    image: clickhouse
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+      - "9009:9009"
+    container_name: clickhouse
+  rdb:
+    build: ./rdb
+    image: "rdb"
+    container_name: rdb
+  homework_server:
+    build: ./homework_server
+    image: "homework_server"
+    links:
+     - rdb:rdb
+     - clickhouse:clickhouse
+    ports:
+      - "4567:4567"
+
