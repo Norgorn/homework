@@ -1,0 +1,225 @@
+{
+	"info": {
+		"name": "homework",
+		"_postman_id": "abaee51d-2fc2-d751-abe9-71421424333a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_sync_basic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:4567/sync/651368ac-9c9b-4e5b-97f8-490fc315e4a9",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4567",
+					"path": [
+						"sync",
+						"651368ac-9c9b-4e5b-97f8-490fc315e4a9"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get_new_basic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:4567/stats/new?from=1564214210000&to=1564214211000",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4567",
+					"path": [
+						"stats",
+						"new"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "1564214210000",
+							"equals": true
+						},
+						{
+							"key": "to",
+							"value": "1564214211000",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get_top_basic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:4567/stats/top?count=2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4567",
+					"path": [
+						"stats",
+						"top"
+					],
+					"query": [
+						{
+							"key": "count",
+							"value": "2",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "post_sync_basic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sync_data",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:4567/sync/aaaaaaaa-36d0-4f78-b39f-d6f69e40a775",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4567",
+					"path": [
+						"sync",
+						"aaaaaaaa-36d0-4f78-b39f-d6f69e40a775"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get_activity_basic",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "value",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:4567/activity/651368ac-9c9b-4e5b-97f8-490fc315e4a9?from=0&to=99999999999999",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4567",
+					"path": [
+						"activity",
+						"651368ac-9c9b-4e5b-97f8-490fc315e4a9"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "0",
+							"equals": true
+						},
+						{
+							"key": "to",
+							"value": "99999999999999",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "post_activity_basic",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "value",
+							"value": "5",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:4567/activity/651368ac-9c9b-4e5b-97f8-490fc315e4a9",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4567",
+					"path": [
+						"activity",
+						"651368ac-9c9b-4e5b-97f8-490fc315e4a9"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
